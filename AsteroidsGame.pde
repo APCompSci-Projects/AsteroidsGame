@@ -9,7 +9,7 @@ public void draw()
   //your code here
   background(0);
   bob.show();
-  //bob.move();
+  bob.move();
 }
 public void keyPressed()
 {
