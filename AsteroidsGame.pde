@@ -27,7 +27,7 @@ public void keyPressed()
   } else if (key == '2') {
     bob.accelerate(0.3);
   }
-  else if (key == 'h'){
+  else if ((key == 'h') || (key == 'H')){
     bob.setX((int)(Math.random() * 500));
     bob.setY((int)(Math.random()*500));
     bob.setXSpeed(0);
