@@ -1,11 +1,38 @@
-class Spaceship //extends Floater  
+class Spaceship extends Floater  
 {   
     public Spaceship() {
     corners = 16;
-    xCorners = new int[]{-18, -8, 3, 3, 3, 8, 18, 24, 18, 8, 3, 3, 3, -8, -18, -4};
-    yCorners = new int[]{-12, -8, -2, -7, -12, -4, -3, 0, 3, 4, 12, 7, 4, 8, 12, 0};
+    xCorners = new int[]{-18, -8, 5, 5, 5, 8, 18, 24, 18, 8, 5, 5, 5, -8, -18, -5};
+    yCorners = new int[]{-9, -5, -2, -5, -10, -4, -3, 0, 3, 4, 10, 5, 2, 5, 9, 0};
     myColor = color(255);
     myCenterX = myCenterY = 250;
     myXspeed = myYspeed = 0;
     myPointDirection = (int)(Math.random() * 360);
+	}
+  //setters and getters
+  public void setX(int x)
+  {
+    myCenterX = x;
+  }
+  public void setY(int y){
+  	myCenterY = y;
+  }
+  public int getX() {
+    return (int)(myCenterX);
+  }
+  public int getY(){
+  	return (int)(myCenterY);
+  }
+  public void setXSpeed(int xSpeed) {
+    myXspeed = xSpeed;
+  }
+  public void setYSpeed(int ySpeed){
+  	myYspeed = ySpeed;
+  }
+  public int getXSpeed() {
+    return (int)(myXspeed);
+  }
+  public int getYSpeed(){
+  	return (int)(myYspeed);
+  }
 }
