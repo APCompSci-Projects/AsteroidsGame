@@ -1,5 +1,6 @@
 //your variable declarations here
 Spaceship bob = new Spaceship();
+Asteroid nick = new Asteroid();
 Star[] spaceSky = new Star[300];
 public void setup() 
 {
@@ -14,6 +15,8 @@ public void draw()
   background(0);
   bob.show();
   bob.move();
+  nick.show();
+  nick.move();
   for (int i = 0; i < spaceSky.length; i++) {
     spaceSky[i].show();
   }
@@ -30,6 +33,7 @@ public void keyPressed()
   else if ((key == 'h') || (key == 'H')){
     bob.setX((int)(Math.random() * 500));
     bob.setY((int)(Math.random()*500));
+    bob.setPointDirection((int)(Math.random() * 360));
     bob.setXSpeed(0);
     bob.setYSpeed(0);
   }
