@@ -1,7 +1,7 @@
 //your variable declarations here
 ArrayList <Bullet> shots = new ArrayList<Bullet>();
 Spaceship bob = new Spaceship();
-//Asteroid nick = new Asteroid();
+ArrayList <Asteroid> rocks = new ArrayList<Asteroid>();
 Star[] spaceSky = new Star[300];
 public void setup() 
 {
@@ -24,6 +24,14 @@ public void draw()
   for (int i = 0; i < shots.size(); i++){
     shots.get(i).move();
     shots.get(i).show();
+  }
+    for (int i = 0; i < rocks.size(); i++) {
+    rocks.get(i).move();
+    rocks.get(i).show();
+    float d = dist(bob.getX(), bob.getY(), rocks.get(i).getX(), rocks.get(i).getY());
+    if (d < 12) {
+      rocks.remove(i);
+    }
   }
 }
 public void keyPressed()
