@@ -18,9 +18,9 @@ public void draw()
   bob.move();
   //nick.show();
   //nick.move();
-  //for (int i = 0; i < spaceSky.length; i++) {
-    //spaceSky[i].show();
-  //}
+for (int i = 0; i < spaceSky.length; i++) {
+    spaceSky[i].show();
+  }
   for (int i = 0; i < shots.size(); i++){
     shots.get(i).move();
     shots.get(i).show();
