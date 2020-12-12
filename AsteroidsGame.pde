@@ -16,8 +16,6 @@ public void draw()
   background(0);
   bob.show();
   bob.move();
-  //nick.show();
-  //nick.move();
 for (int i = 0; i < spaceSky.length; i++) {
     spaceSky[i].show();
   }
