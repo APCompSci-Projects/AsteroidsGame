@@ -25,7 +25,7 @@ public void draw()
     shots.get(i).move();
     shots.get(i).show();
   }
-    for (int i = 0; i < rocks.size(); i++) {
+  for (int i = 0; i < rocks.size(); i++) {
     rocks.get(i).move();
     rocks.get(i).show();
     float d = dist(bob.getX(), bob.getY(), rocks.get(i).getX(), rocks.get(i).getY());
