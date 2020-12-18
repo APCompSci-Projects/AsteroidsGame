@@ -9,7 +9,7 @@ public void setup()
   for (int i = 0; i < spaceSky.length; i++) {
     spaceSky[i] = new Star();
   }
-  for (int i = 0; i < 15; i++){
+  for (int i = 0; i < 25; i++){
     rocks.add(new Asteroid());
   }
 }
@@ -29,12 +29,18 @@ for (int i = 0; i < spaceSky.length; i++) {
   for (int i = 0; i < rocks.size(); i++) {
     rocks.get(i).move();
     rocks.get(i).show();
-    float d = dist(bob.getX(), bob.getY(), rocks.get(i).getX(), rocks.get(i).getY());
-    if (d < 20) {
-      rocks.remove(i);
+    for (int j = 0; j < shots.size(); j++) {
+      float d2 = dist((float)(shots.get(j).getX()), (float)(shots.get(j).getY()), (float)(rocks.get(i).getX()), (float)(rocks.get(i).getY()));
+      if (d2 < 20) {
+        //remove asteroid and bullet
+        shots.remove(j);
+        rocks.remove(i);
+        break;
+      }
     }
   }
 }
+
 public void keyPressed()
 {
   if (key == '1') {
@@ -45,6 +51,10 @@ public void keyPressed()
   }
   else if (key == '3') {
     bob.turn(5);
+  }
+  else if (key == '4'){
+    bob.setXSpeed(0);
+    bob.setYSpeed(0);
   } 
     else if (key == ' '){
     shots.add(new Bullet(bob));
